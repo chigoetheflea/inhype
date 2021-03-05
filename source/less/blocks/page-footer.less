@@ -1,0 +1,159 @@
+.page-footer {
+  padding-top: 80px;
+  border-bottom: 5px solid @plum;
+}
+
+.page-footer__left,
+.page-footer__center,
+.page-footer__right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 33.33%;
+}
+
+.page-footer__center {
+  align-items: center;
+}
+
+.page-footer__right {
+  align-items: flex-end;
+}
+
+.page-footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-footer__phone,
+.page-footer__email {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+
+  a {
+    color: #ffffff;
+
+    &:hover,
+    &:focus {
+      color: @plum;
+    }
+
+    &:active {
+      color: @pink;
+    }
+  }
+}
+
+.page-footer__logo {
+  svg {
+    .transition(svg);
+
+    fill: #ffffff;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: @plum;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: @pink;
+    }
+  }
+}
+
+.page-footer__social-list {
+  .list-style-none();
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.page-footer__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+
+  color: #ffffff;
+
+  svg {
+    .transition(svg);
+
+    fill: #ffffff;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: @plum;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: @pink;
+    }
+  }
+}
+
+.page-footer__copyright {
+  margin-top: 80px;
+  margin-bottom: 30px;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: @lightgray;
+  text-align: center;
+}
+
+@media (max-width: @break-point-tablet) {
+  .page-footer {
+    padding-top: 45px;
+  }
+
+  .page-footer__container {
+    flex-direction: column;
+  }
+
+  .page-footer__left {
+    order: 1;
+    text-align: center;
+  }
+
+  .page-footer__right {
+    order: 2;
+  }
+
+  .page-footer__left,
+  .page-footer__right {
+    margin-top: 30px;
+  }
+
+  .page-footer__right {
+    align-items: center;
+  }
+
+  .page-footer__center,
+  .page-footer__left,
+  .page-footer__right {
+    width: 100%;
+  }
+
+  .page-footer__copyright {
+    margin-top: 60px;
+  }
+}

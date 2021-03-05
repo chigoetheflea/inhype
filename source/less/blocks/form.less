@@ -1,0 +1,202 @@
+.form {
+  width: 100%;
+  max-width: 600px;
+}
+
+.form__group {
+  position: relative;
+
+  &--flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &--margin {
+    margin-top: 60px;
+  }
+}
+
+.form__label {
+  .transition(label);
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  margin-top: -28px;
+
+  font-size: 24px;
+  line-height: 1;
+  color: @lightgray;
+
+  &--active {
+    top: 0;
+    margin-top: -16px !important;
+    font-size: 14px;
+  }
+
+  &--textarea {
+    top: 0;
+    margin-top: 5px;
+  }
+}
+
+.form__input,
+.form__textarea,
+.form__select {
+  .transition();
+
+  width: 100%;
+
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 32px;
+
+  background: none;
+  border: none;
+  border-bottom: 2px solid @plum;
+  outline: 1px dotted @darkgray;
+
+  &:focus {
+    border-color: #ffffff;
+  }
+
+  &.error {
+    border-color: @scarlet !important;
+  }
+}
+
+.form__textarea {
+  height: 150px;
+}
+
+.form__input,
+.form__select {
+  height: 70px;
+  margin-bottom: 30px;
+}
+
+.form__select {
+  position: relative;
+  appearance: none;
+  background: url('../img/icon_arrow-bottom.svg') no-repeat;
+  background-size: 18px 10px;
+  background-position: right 30px top 50%;
+  cursor: pointer;
+}
+
+.form__submit {
+  display: flex;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+
+  &:hover,
+  &:focus {
+    color: @plum;
+
+    .form__arrow {
+      svg {
+        fill: @plum;
+      }
+
+      &::before {
+        background-color: @plum;
+      }
+    }
+  }
+
+  &:active {
+    color: @pink;
+
+    .form__arrow {
+      svg {
+        fill: @pink;
+      }
+
+      &::before {
+        background-color: @pink;
+      }
+    }
+  }
+
+  &:disabled {
+    color: @lightgray;
+
+    .form__arrow {
+      svg {
+        fill: @lightgray;
+      }
+
+      &::before {
+        background-color: @lightgray;
+      }
+    }
+  }
+}
+
+.form__arrow {
+  margin-left: 30px;
+}
+
+.form__result {
+  font-size: 24px;
+  line-height: 32px;
+  color: @plum;
+  opacity: 0;
+  pointer-events: none;
+
+  &--active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.form__server-answer {
+  &--fail {
+    color: @scarlet;
+  }
+
+  &--success {
+    color: @plum;
+  }
+}
+
+@media (max-width: @break-point-4) {
+  .form__input,
+  .form__select {
+    height: 50px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .form__label {
+    margin-top: -14px;
+    font-size: 16px;
+
+    &--active {
+      top: 0;
+      margin-top: -7px !important;
+      font-size: 14px;
+    }
+  }
+
+  .form__textarea {
+    height: 120px;
+  }
+
+  .form__group {
+    &--margin {
+      margin-top: 30px;
+    }
+  }
+
+  .form__submit {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

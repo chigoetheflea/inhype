@@ -1,0 +1,200 @@
+.reviews {
+  padding-bottom: 80px;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: 63px;
+    z-index: 30;
+
+    width: 100%;
+
+    color: @gray;
+    font-weight: 700;
+    font-size: 150px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    white-space: nowrap;
+
+    content: 'Клиенты об inhype';
+  }
+}
+
+.section__title-wrapper,
+.reviews__slider {
+  position: relative;
+  z-index: 50;
+}
+
+.reviews__slider {
+  margin-top: 80px;
+}
+
+.reviews__slides {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.reviews__header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reviews__img {
+  width: 150px;
+  height: 150px;
+  background-color: @plum;
+}
+
+.reviews__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 30px;
+
+  font-size: 60px;
+  line-height: 67px;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  transform: translateY(97px);
+}
+
+.reviews__nick {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.reviews__text {
+  margin-top: 110px;
+  margin-bottom: 0;
+  padding: 0 1px;
+}
+
+.reviews__slider-navigation {
+  justify-content: center;
+  margin-top: 80px;
+}
+
+@media (max-width: @break-point-0) {
+  .reviews {
+    padding-bottom: 55px;
+
+    &::after {
+      bottom: 63px;
+      font-size: 100px;
+    }
+  }
+
+  .reviews__slider-navigation {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: @break-point-1) {
+  .reviews {
+    padding-bottom: 55px;
+
+    &::after {
+      font-size: 80px;
+    }
+  }
+
+  .reviews__slider-navigation {
+    margin-top: 45px;
+  }
+}
+
+@media (max-width: @break-point-2) {
+  .reviews {
+    padding-bottom: 45px;
+
+    &::after {
+      bottom: 53px;
+    }
+  }
+
+  .reviews__slider {
+    margin-top: 45px;
+  }
+
+  .reviews__nick {
+    bottom: auto;
+    top: 0;
+  }
+}
+
+@media (max-width: @break-point-tablet) {
+  .reviews {
+    &::after {
+      white-space: normal;
+    }
+  }
+
+  .reviews__slides {
+    width: 100%;
+  }
+
+  .reviews__title {
+    font-size: 48px;
+    line-height: 55px;
+    transform: translateY(106px);
+  }
+}
+
+@media (max-width: @break-point-3) {
+  .reviews__title {
+    order: 1;
+    width: 100%;
+    margin: 15px 0 0 0;
+
+    font-size: 48px;
+    line-height: 55px;
+
+    transform: none;
+  }
+
+  .reviews__text {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: @break-point-4) {
+  .reviews {
+    &::after {
+      font-size: 60px;
+    }
+  }
+
+  .reviews__title {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .reviews__nick {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: @break-point-mobile) {
+  .reviews__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .reviews__nick {
+    position: relative;
+    width: 100%;
+  }
+
+  .reviews__navigation-wrapper {
+    padding: 0;
+  }
+}

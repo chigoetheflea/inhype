@@ -1,0 +1,104 @@
+.service-single__tabs {
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  & > * {
+    position: relative;
+    z-index: 50;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    z-index: 30;
+
+    width: 100%;
+
+    color: @gray;
+    font-weight: 700;
+    font-size: 220px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+  }
+
+  &::before {
+    top: 0;
+    content: 'just be';
+  }
+
+  &::after {
+    bottom: -150px;
+    content: 'inhype';
+  }
+}
+
+
+@media (max-width: @break-point-1) {
+
+}
+
+@media (max-width: @break-point-2) {
+  .service-single__tabs {
+    padding: 0;
+
+    &::before,
+    &::after {
+      font-size: 105px;
+    }
+
+    &::before {
+      top: 20px;
+    }
+
+    &::after {
+      bottom: -100px;
+    }
+  }
+}
+
+@media (max-width: @break-point-tablet) {
+  .service-single__tabs {
+    margin-top: 45px;
+
+    &::before {
+      top: 60px;
+    }
+  }
+}
+
+@media (max-width: @break-point-3) {
+  .service-single__tabs  {
+    &::before,
+    &::after {
+      font-size: 90px;
+    }
+
+    &::before {
+      top: 105px;
+    }
+
+    &::after {
+      bottom: -90px;
+    }
+  }
+}
+
+@media (max-width: @break-point-mobile) {
+  .service-single__tabs  {
+    &::before,
+    &::after {
+      font-size: 80px;
+    }
+
+    &::before {
+      top: 160px;
+    }
+
+    &::after {
+      bottom: -45px;
+    }
+  }
+}

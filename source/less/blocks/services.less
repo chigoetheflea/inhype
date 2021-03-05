@@ -1,0 +1,130 @@
+.services {
+  padding-bottom: 80px;
+}
+
+.services__list {
+  .list-style-none();
+
+  position: relative;
+  margin-top: 120px;
+
+  li {
+    position: relative;
+    z-index: 50;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    z-index: 30;
+
+    width: 100%;
+
+    color: @gray;
+    font-weight: 700;
+    font-size: 220px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+  }
+
+  &::before {
+    top: -80px;
+    content: 'just be';
+  }
+
+  &::after {
+    bottom: -118px;
+    content: 'inhype';
+  }
+}
+
+.services__list-item {
+  margin-top: 60px;
+}
+
+@media (max-width: @break-point-1) {
+  .services__list {
+    margin-top: 120px;
+
+    &::before {
+      top: -100px;
+    }
+  }
+}
+
+@media (max-width: @break-point-2) {
+  .services__list {
+    margin-top: 90px;
+
+    &::after,
+    &::before {
+      font-size: 180px;
+    }
+
+    &::before {
+      top: -110px;
+    }
+  }
+
+  .services__list-item {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: @break-point-tablet) {
+  .services__list {
+    margin-top: 60px;
+
+    &::before,
+    &::after {
+      font-size: 120px;
+    }
+
+    &::before {
+      top: -55px;
+    }
+
+    &::after {
+      bottom: -80px;
+    }
+  }
+}
+
+@media (max-width: @break-point-3) {
+  .services__list {
+    &::before,
+    &::after {
+      font-size: 90px;
+    }
+
+    &::before {
+      top: -40px;
+    }
+
+    &::after {
+      bottom: -65px;
+    }
+  }
+}
+
+@media (max-width: @break-point-mobile) {
+  .services__list {
+    margin-top: 40px;
+
+    &::before,
+    &::after {
+      font-size: 65px;
+    }
+
+    &::before {
+      top: -22px;
+    }
+
+    &::after {
+      bottom: -45px;
+    }
+  }
+}
+

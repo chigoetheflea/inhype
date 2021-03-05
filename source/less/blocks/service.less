@@ -1,0 +1,131 @@
+.service__link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  height: 450px;
+
+  color: #ffffff;
+
+  background-position: 50% 50%;
+  background-size: cover;
+  background-color: @lightgray;
+  background-blend-mode: multiply;
+
+  &>* {
+    position: relative;
+    z-index: 30;
+  }
+
+  &--nails {
+    background-image: url('../img/pic_cat_1.jpg');
+  }
+
+  &--hairs {
+    background-image: url('../img/pic_cat_2.jpg');
+  }
+
+  &--makeup {
+    background-image: url('../img/pic_cat_3.jpg');
+  }
+
+  &--eyes {
+    background-image: url('../img/pic_cat_4.jpg');
+  }
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: @plum;
+    animation: big-bounce 0.4s 1;
+
+    .service__title {
+      opacity: 1;
+    }
+
+    &::after {
+      background-color:  rgba(176, 144, 213, 0.9);
+    }
+  }
+
+  &:active {
+    background-color: @pink;
+
+    &::after {
+      background-color:  rgba(200, 142, 223, 0.9);
+    }
+  }
+
+  &::after {
+    .transition();
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+    width: 100%;
+    height: 100%;
+
+    background-color:  rgba(0, 0, 0, 0.55);
+
+    content: '';
+  }
+}
+
+.service__price {
+  align-self: flex-end;
+}
+
+.service__title {
+  .transition();
+
+  margin: auto 0;
+  padding: 0 50px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 42px;
+  line-height: 55px;
+  text-align: center;
+
+  opacity: 0.4;
+}
+
+.service__more {
+  align-self: flex-start;
+  width: 100%;
+  text-decoration: underline;
+}
+
+.service__price,
+.service__more {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.service__more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service__arrow {
+  flex-grow: 1;
+  margin-left: 30px;
+}
+
+@media (max-width: @break-point-0) {
+  .service__title {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: @break-point-4) {
+  .service__link {
+    height: 300px;
+  }
+}

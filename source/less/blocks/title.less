@@ -1,0 +1,56 @@
+.title {
+  position: relative;
+
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--left {
+    text-align: left;
+  }
+
+  &--inner {
+    z-index: 30;
+
+    display: inline-block;
+    padding-right: 50%;
+
+    font-size: 64px;
+    line-height: 70px;
+    font-weight: 300;
+    text-align: left;
+  }
+}
+
+@media (max-width: @break-point-tablet) {
+  .title {
+    &--inner {
+      padding: 0;
+      font-size: 48px;
+      line-height: 55px;
+    }
+  }
+}
+
+@media (max-width: @break-point-3) {
+  .title {
+    &--inner {
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+}
+
+@media (max-width: @break-point-4) {
+  .title {
+    &--inner {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}

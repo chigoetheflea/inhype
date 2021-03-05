@@ -1,0 +1,66 @@
+.arrow {
+  .transition();
+
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  svg {
+    .transition(svg);
+  }
+
+  &::before {
+    .transition();
+
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 2px;
+    width: calc(100% - 2px);
+    height: 2px;
+
+    background-color: @black;
+
+    content: '';
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: #ffffff;
+    }
+
+    &::before {
+      background-color: #ffffff;
+    }
+  }
+
+  &--short {
+    width: 30px;
+  }
+
+  &--medium {
+    width: 100px;
+  }
+
+  &--white {
+    svg {
+      fill: #ffffff;
+    }
+
+    &::before {
+      background-color: #ffffff;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: @plum;
+      }
+
+      &::before {
+        background-color: @plum;
+      }
+    }
+  }
+}

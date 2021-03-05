@@ -1,0 +1,43 @@
+.fbx-rounded {
+  .fbx-item-current,
+  .fbx-item-image,
+  .fbx-item-next,
+  .fbx-next,
+  .fbx-prev,
+  .fbx-inner {
+    border-radius: 0 !important;
+  }
+}
+
+.fbx-next,
+.fbx-prev,
+.fbx-close {
+  svg {
+    .transition(svg);
+
+    fill: @black !important;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    svg {
+      fill: @plum !important;
+    }
+  }
+}
+
+.fbx-fullscreen-mode .fbx-btn-shadow,
+.fbx-fullscreen-mode .fbx-next.fbx-btn-shadow,
+.fbx-fullscreen-mode .fbx-prev.fbx-btn-shadow,
+.fbx-inner-shadow,
+.fbx-rounded .fbx-btn-shadow,
+.fbx-rounded.fbx-inset-buttons.fbx-desktop:not(.fbx-fullscreen-mode) .fbx-next.fbx-btn-shadow .fbx-icon,
+.fbx-rounded.fbx-inset-buttons.fbx-desktop:not(.fbx-fullscreen-mode) .fbx-prev.fbx-btn-shadow .fbx-icon, .fbx-rounded.fbx-inset-buttons.fbx-tablet:not(.fbx-fullscreen-mode) .fbx-next.fbx-btn-shadow .fbx-icon, .fbx-rounded.fbx-inset-buttons.fbx-tablet:not(.fbx-fullscreen-mode) .fbx-prev.fbx-btn-shadow .fbx-icon, .fbx-sticky-buttons .fbx-next.fbx-btn-shadow,
+.fbx-sticky-buttons .fbx-prev.fbx-btn-shadow {
+  box-shadow: none !important;
+}
+
+.fbx-caption {
+  display: none !important;
+}

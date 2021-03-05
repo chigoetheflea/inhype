@@ -1,0 +1,167 @@
+.promo__slider {
+  position: relative;
+  margin-top: 80px;
+}
+
+.promo__slides {
+  position: relative;
+  z-index: 50;
+}
+
+.promo__slider-navigation {
+  position: absolute;
+  z-index: 60;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+}
+
+.promo__slide {
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+
+.promo__img,
+.promo__content-wrapper {
+  width: 50%;
+}
+
+.promo__img {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.promo__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 60px 180px 60px;
+  max-width: 600px;
+}
+
+.promo__content {
+  justify-content: flex-end;
+}
+
+.promo__column {
+  background-color: @black;
+}
+
+.promo__title {
+  margin: 0;
+
+  font-size: 70px;
+  line-height: 75px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.promo__subtitle {
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
+
+.promo__text {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.promo__actions {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 30px;
+}
+
+.promo__link {
+  margin-left: 60px;
+  color: @lightgray;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@media (max-width: @break-point-1) {
+  .promo__title {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .promo__subtitle {
+    margin-top: 5px;
+  }
+
+  .promo__text {
+    margin-top: 30px;
+  }
+
+  .promo__content-wrapper {
+    padding: 45px 45px 145px 45px;
+  }
+}
+
+@media (max-width: @break-point-2) {
+  .promo__slider {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: @break-point-tablet) {
+  .promo__slide {
+    display: block;
+  }
+
+  .promo__img,
+  .promo__content-wrapper {
+    width: 100%;
+  }
+
+  .promo__content-wrapper {
+    max-width: 100%;
+  }
+
+  .promo__img {
+    height: 400px;
+  }
+
+  .promo__slider-navigation {
+    width: 100%;
+  }
+}
+
+@media (max-width: @break-point-3) {
+  .promo__actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: @break-point-4) {
+  .promo__content-wrapper {
+    padding: 30px 30px 130px 30px;
+  }
+
+  .promo__subtitle {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: @break-point-mobile) {
+  .promo__img {
+    height: 300px;
+  }
+
+  .promo__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .promo__actions {
+    flex-direction: column;
+  }
+
+  .promo__link {
+    margin: 15px 0 0 0;
+  }
+}

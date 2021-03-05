@@ -1,0 +1,133 @@
+.price-table {
+  table {
+    width: 100%;
+  }
+
+  tr {
+    display: flex;
+  }
+
+  td {
+    padding: 10px 0;
+
+    &:first-child {
+      display: flex;
+      flex-grow: 1;
+
+      font-size: 24px;
+      line-height: 32px;
+
+      &::after {
+        position: relative;
+        top: 100%;
+
+        flex-grow: 1;
+        height: 1px;
+        margin-left: 10px;
+
+        border-bottom: 1px dotted #ffffff;
+
+        content: '';
+      }
+    }
+
+    &:last-child {
+      position: relative;
+
+      display: flex;
+      align-items: flex-end;
+
+      padding-right: 40px;
+      font-size: 36px;
+      line-height: 32px;
+      font-style: italic;
+
+      &::after {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+
+        font-size: 14px;
+        line-height: 20px;
+
+        content: 'руб.';
+      }
+    }
+  }
+}
+
+@media (max-width: @break-point-tablet) {
+  .price-table {
+    td {
+      &:first-child {
+        display: flex;
+        flex-grow: 1;
+
+        font-size: 16px;
+        line-height: 22px;
+
+        &::after {
+          position: relative;
+
+          flex-grow: 1;
+          height: 1px;
+          margin-left: 10px;
+
+          border-bottom: 1px dotted #ffffff;
+
+          content: '';
+        }
+      }
+
+      &:last-child {
+        position: relative;
+
+        padding-right: 35px;
+        font-size: 18px;
+        line-height: 22px;
+        font-style: italic;
+
+        &::after {
+          position: absolute;
+          bottom: 10px;
+          right: 0;
+
+          font-size: 14px;
+          line-height: 20px;
+
+          content: 'руб.';
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @break-point-4) {
+  .price-table {
+    tr, td, td:first-child, td:last-child {
+      display: block;
+    }
+
+    tr {
+      margin-top: 10px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    td {
+      padding: 5px 0;
+
+      &:last-child {
+        text-align: right;
+        border-top: 1px dotted #ffffff;
+
+        &:after {
+          bottom: 5px;
+        }
+      }
+    }
+  }
+}
+

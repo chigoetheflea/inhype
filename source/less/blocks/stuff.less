@@ -1,0 +1,145 @@
+.stuff__slider-navigation {
+  padding-left: 50%;
+}
+
+.stuff__slide {
+  justify-content: flex-end;
+  position: relative;
+}
+
+.stuff__slider {
+  margin-top: 80px;
+}
+
+.stuff__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
+
+  width: auto;
+  height: 100%;
+
+  opacity: 0.7;
+}
+
+.stuff__title {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 60px;
+  line-height: 67px;
+  font-weight: 300;
+}
+
+.stuff__occupation {
+  margin-top: 15px;
+  margin-bottom: 0;
+
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.stuff__text {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.stuff__content-wrapper {
+  position: relative;
+  z-index: 50;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-height: 600px;
+}
+
+.stuff__button {
+  margin-top: auto;
+}
+
+@media (max-width: @break-point-0) {
+  .stuff__button {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: @break-point-2) {
+  .stuff__slider {
+    margin-top: 45px;
+  }
+}
+
+@media (max-width: @break-point-3) {
+  .stuff__title {
+    font-size: 48px;
+    line-height: 55px;
+  }
+}
+
+@media (max-width: @break-point-tablet) {
+  .stuff__content-wrapper {
+    display: block;
+  }
+
+  .stuff__slide {
+    display: block;
+    padding: 0 5px;
+  }
+
+  .stuff__img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .stuff__content-wrapper {
+    min-height: 0;
+    padding-top: 0;
+    margin-top: -30px;
+    text-align: center;
+  }
+
+  .stuff__occupation,
+  .stuff__text {
+    text-align: left;
+  }
+
+  .stuff__text {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .stuff__slider-navigation {
+    padding: 0;
+  }
+
+  .stuff__navigation-wrapper {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: @break-point-4) {
+  .stuff__title {
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: @break-point-mobile) {
+  .stuff__text {
+    margin-bottom: 30px;
+  }
+
+  .stuff__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
